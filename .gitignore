@@ -1,0 +1,45 @@
+# Local Mirror of Problems
+# <http://kmkeen.com/local-euler/2014-06-29-05-02-51-591.html>
+project_euler.txt
+project_euler/
+
+# incomplete and/or temporary files/directories
+~*/
+~*
+*~
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Python
+__pycache__/
+*.py[cod]
+
+# FUSE hidden files on Ubuntu
+.fuse_hidden*
