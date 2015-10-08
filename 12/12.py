@@ -22,10 +22,10 @@
    divisors?
 """
 
-from math import ceil, sqrt
+from math import floor, sqrt
 
 def triangle_numbers():
-    """Generates triangle numbers infinitely"""
+    """Generate triangle numbers infinitely"""
     n, i = 0, 1
     while True:
         n += i
@@ -37,7 +37,7 @@ if __name__ == '__main__':
     
     for number in triangle_numbers():
         factors = {1, number}
-        for divisor in range(2, ceil(sqrt(number)) + 1):
+        for divisor in range(2, floor(sqrt(number)) + 1):
             if not number % divisor:
                 factors.update((divisor, number // divisor))
         if len(factors) > n:

@@ -4,14 +4,14 @@
    Find the sum of all the primes below two million.
 """
 
-from math import ceil, sqrt
+from math import floor, sqrt
 
 if __name__ == '__main__':
     upper = 2000000
-    sum_of_primes = 2
 
+    sum_of_primes = 2
     for number in range(3, upper, 2):
-        for divisor in range(3, ceil(sqrt(number)) + 1, 2):
+        for divisor in range(3, floor(sqrt(number)) + 1, 2):
             if not number % divisor:
                 break
         else:
