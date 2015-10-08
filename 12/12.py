@@ -24,25 +24,26 @@
 
 from math import sqrt
 
-def triangle_numbers():
-    """Generate triangle numbers infinitely"""
-    n, i = 0, 1
-    while True:
-        n += i
-        i += 1
-        yield n
+def num_of_divisors(n):
+    """Return the number of divisors of n"""
+    divisors = {1, n}
+    for divisor in range(1, int(sqrt(n)) + 1):
+        if not n % divisor:
+            divisors.update((divisor, n // divisor))
+    return len(divisors)
 
 if __name__ == '__main__':
     n = 500
-    
-    for number in triangle_numbers():
-        if number < n:
-            continue
-        n_factors = 2 # 1 and the number itself
-        for divisor in range(2, int(sqrt(number)) + 1):
-            if not number % divisor:
-                n_factors += 2 # the divisor and the quotient
-        if n_factors > n:
-            break
+        
+    i, triangle = 1, 1
+    while num_of_divisors(triangle) < 500:
+        i += 1
+        triangle += i
 
-    print(number)
+    print(triangle)
+    
+"""
+NOTE:
+Each triangle number can be expressed as n * (n + 1) / 2.
+
+"""
