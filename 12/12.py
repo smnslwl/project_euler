@@ -36,7 +36,7 @@ if __name__ == '__main__':
     n = 500
         
     i, triangle = 1, 1
-    while num_of_divisors(triangle) < 500:
+    while num_of_divisors(triangle) < n:
         i += 1
         triangle += i
 
