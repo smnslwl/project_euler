@@ -5,7 +5,7 @@
    What is the 10001st prime number?
 """
 
-from math import floor, sqrt
+from math import sqrt
 
 def is_prime(n):
     """Returns true if n is a prime number"""
@@ -13,7 +13,7 @@ def is_prime(n):
         return True
     if not n % 2 or n < 2:
         return False
-    return all(n % x for x in range(3, floor(sqrt(n)) + 1, 2))
+    return all(n % x for x in range(3, int(sqrt(n)) + 1, 2))
 
 if __name__ == '__main__':
     n = 10001
