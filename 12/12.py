@@ -36,11 +36,13 @@ if __name__ == '__main__':
     n = 500
     
     for number in triangle_numbers():
-        factors = {1, number}
+        if number < n:
+            continue
+        n_factors = 2 # 1 and the number itself
         for divisor in range(2, int(sqrt(number)) + 1):
             if not number % divisor:
-                factors.update((divisor, number // divisor))
-        if len(factors) > n:
+                n_factors += 2 # the divisor and the quotient
+        if n_factors > n:
             break
 
     print(number)
