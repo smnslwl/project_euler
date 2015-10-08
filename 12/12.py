@@ -37,7 +37,7 @@ if __name__ == '__main__':
     
     for number in triangle_numbers():
         factors = {1, number}
-        for divisor in range(2, ceil(sqrt(number))):
+        for divisor in range(2, ceil(sqrt(number)) + 1):
             if not number % divisor:
                 factors.update((divisor, number // divisor))
         if len(factors) > n:
