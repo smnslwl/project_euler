@@ -1,7 +1,5 @@
-# Local Mirror of Problems
-# <http://kmkeen.com/local-euler/2014-06-29-05-02-51-591.html>
-project_euler.txt
-project_euler/
+# Meta stuff (local mirror of problems etc.)
+meta/
 
 # incomplete and/or temporary files/directories
 ~*/
