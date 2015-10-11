@@ -6,16 +6,6 @@
    the numbers from 1 to 20?
 """
 
-def prime_factors(n):
-    """Generates the prime factors of n"""
-    divisor = 2
-    while divisor <= n:
-        if not n % divisor:
-            yield divisor
-            n /= divisor
-        else:
-            divisor += 1
-
 def highest_common_factor(m, n):
     """Returns the HCF/GCD of m and n"""
     while n:
