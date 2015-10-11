@@ -25,4 +25,3 @@ if __name__ == '__main__':
     total = sum((i + 1) * alpha_value(name) for i, name in enumerate(names))
     
     print(total)
-
